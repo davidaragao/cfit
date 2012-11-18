@@ -1,5 +1,29 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  email           :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  password_digest :string(255)
+#  remember_token  :string(255)
+#  admin           :boolean          default(FALSE)
+#  age             :string(255)
+#  birth_date      :date
+#  height          :float
+#  cause           :string(255)
+#  actual_weight   :float
+#  goal_weight     :float
+#  start_date      :date
+#  goal_date       :date
+#  prize           :string(255)
+#
+
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :birth_date, :start_date, :goal_date, :height,
+    :cause, :actual_weight, :goal_weight, :prize, :password, :password_confirmation
   has_secure_password
   has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy

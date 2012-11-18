@@ -5,11 +5,35 @@
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: @user %>
-      <%= f.label :name %>
+      <%= f.label :nome %>
       <%= f.text_field :name %>
 
       <%= f.label :email %>
       <%= f.text_field :email %>
+
+      <%= f.label :data_de_nascimento %>
+      <%= f.date_select :birth_date %>
+
+      <%= f.label :altura %>
+      <%= f.text_field :height %>
+      
+      <%= f.label :causa %>
+      <%= f.text_area :cause %>
+
+      <%= f.label :peso_atual %>
+      <%= f.text_field :actual_weight %>
+
+      <%= f.label :peso_desejado %>
+      <%= f.text_field :goal_weight %>
+
+      <%= f.label :data_de_início %>
+      <%= f.date_select :start_date %>
+
+      <%= f.label :data_de_termino %>
+      <%= f.date_select :goal_date %>
+
+      <%= f.label :prêmio %>
+      <%= f.text_field :prize %>
 
       <%= f.label :password %>
       <%= f.password_field :password %>
