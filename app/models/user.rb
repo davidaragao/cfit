@@ -24,6 +24,7 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :email, :birth_date, :start_date, :goal_date, :height,
     :cause, :actual_weight, :goal_weight, :prize, :password, :password_confirmation
+
   has_secure_password
   has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
@@ -57,6 +58,17 @@ class User < ActiveRecord::Base
 
   def feed
     Micropost.from_users_followed_by(self)
+  end
+
+  def self.from_omniauth(auth)
+    where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.name
+      user.oauth_token = auth.credentials.token
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+      user.save!
+    end
   end
 
   private
