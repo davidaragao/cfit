@@ -14,7 +14,7 @@ SampleApp::Application.routes.draw do
   # match '/signin',   to: 'sessions#new'
   # match '/signout',  to: 'sessions#destroy', via: :delete
 
-  match 'auth/:provider/callback', to: 'sessions#new'
+  match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
 

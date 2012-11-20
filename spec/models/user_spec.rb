@@ -2,23 +2,28 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  name            :string(255)
-#  email           :string(255)
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  password_digest :string(255)
-#  remember_token  :string(255)
-#  admin           :boolean          default(FALSE)
-#  age             :string(255)
-#  birth_date      :date
-#  height          :float
-#  cause           :string(255)
-#  actual_weight   :float
-#  goal_weight     :float
-#  start_date      :date
-#  goal_date       :date
-#  prize           :string(255)
+#  id               :integer          not null, primary key
+#  name             :string(255)
+#  email            :string(255)
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  password_digest  :string(255)
+#  remember_token   :string(255)
+#  admin            :boolean          default(FALSE)
+#  age              :string(255)
+#  birth_date       :date
+#  height           :float
+#  cause            :string(255)
+#  actual_weight    :float
+#  goal_weight      :float
+#  start_date       :date
+#  goal_date        :date
+#  prize            :string(255)
+#  provider         :string(255)
+#  uid              :string(255)
+#  oauth_token      :string(255)
+#  oauth_expires_at :datetime
+#  image_url        :string(255)
 #
 
 require 'spec_helper'
