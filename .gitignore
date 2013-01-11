@@ -13,3 +13,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+<<<<<<< HEAD
+=======
+.DS_Store
+bundler_stubs/
+>>>>>>> dab5974b994c4b42995a223f7f7f2e5106a1ebea

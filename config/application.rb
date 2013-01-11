@@ -1,6 +1,16 @@
 require File.expand_path('../boot', __FILE__)
 
+<<<<<<< HEAD
 require 'rails/all'
+=======
+# Pick the frameworks you want:
+require "active_record/railtie"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "active_resource/railtie"
+require "sprockets/railtie"
+# require "rails/test_unit/railtie"
+>>>>>>> dab5974b994c4b42995a223f7f7f2e5106a1ebea
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -9,7 +19,11 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+<<<<<<< HEAD
 module Cfit
+=======
+module SampleApp
+>>>>>>> dab5974b994c4b42995a223f7f7f2e5106a1ebea
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -39,9 +53,12 @@ module Cfit
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+<<<<<<< HEAD
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
+=======
+>>>>>>> dab5974b994c4b42995a223f7f7f2e5106a1ebea
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types

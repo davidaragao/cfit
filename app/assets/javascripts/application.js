@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+<<<<<<< HEAD
+=======
+//= require bootstrap
+>>>>>>> dab5974b994c4b42995a223f7f7f2e5106a1ebea
 //= require_tree .

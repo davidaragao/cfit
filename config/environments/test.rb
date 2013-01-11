@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Cfit::Application.configure do
+=======
+SampleApp::Application.configure do
+>>>>>>> dab5974b994c4b42995a223f7f7f2e5106a1ebea
   # Settings specified here will take precedence over those in config/application.rb
 
   # The test environment is used exclusively to run your application's
@@ -34,4 +38,13 @@ Cfit::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+<<<<<<< HEAD
+=======
+
+  # Speed up tests by lowering BCrypt's cost function.
+  require 'bcrypt'
+  silence_warnings do
+    BCrypt::Engine::DEFAULT_COST = BCrypt::Engine::MIN_COST
+  end
+>>>>>>> dab5974b994c4b42995a223f7f7f2e5106a1ebea
 end

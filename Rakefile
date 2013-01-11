@@ -4,4 +4,8 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+<<<<<<< HEAD
 Cfit::Application.load_tasks
+=======
+SampleApp::Application.load_tasks
+>>>>>>> dab5974b994c4b42995a223f7f7f2e5106a1ebea

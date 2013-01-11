@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Cfit::Application.configure do
+=======
+SampleApp::Application.configure do
+>>>>>>> dab5974b994c4b42995a223f7f7f2e5106a1ebea
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
